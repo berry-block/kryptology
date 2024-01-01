@@ -10,10 +10,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/coinbase/kryptology/pkg/core/curves"
-	dkg "github.com/coinbase/kryptology/pkg/dkg/frost"
-	"github.com/coinbase/kryptology/pkg/sharing"
-	bls "github.com/coinbase/kryptology/pkg/signatures/bls/bls_sig"
+	"github.com/berry-block/kryptology/pkg/core/curves"
+	dkg "github.com/berry-block/kryptology/pkg/dkg/frost"
+	"github.com/berry-block/kryptology/pkg/sharing"
+	bls "github.com/berry-block/kryptology/pkg/signatures/bls/bls_sig"
 )
 
 const LIMIT = 4

@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/crypto/sha3"
 
-	"github.com/coinbase/kryptology/pkg/core/curves"
+	"github.com/berry-block/kryptology/pkg/core/curves"
 )
 
 const (

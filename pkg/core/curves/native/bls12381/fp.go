@@ -6,8 +6,8 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/coinbase/kryptology/internal"
-	"github.com/coinbase/kryptology/pkg/core/curves/native"
+	"github.com/berry-block/kryptology/internal"
+	"github.com/berry-block/kryptology/pkg/core/curves/native"
 )
 
 // fp field element mod p

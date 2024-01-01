@@ -1,16 +1,21 @@
 # Important
+
 This library has been archived and is no longer supported. As such it should not be used, and it is not used by Coinbase.
 
 # Kryptology
+
 Coinbase's advanced cryptography library
 
 ## Quickstart
+
 Use the latest version of this library:
+
 ```$xslt
 go get github.com/coinbase/kryptology
 ```
 
 Pin a specific release of this library:
+
 ```$xslt
 go get github.com/coinbase/kryptology@v1.6.0
 ```
@@ -22,14 +27,15 @@ Public documentations can be found at https://pkg.go.dev/github.com/coinbase/kry
 To access the documentation of the local version, run `godoc -http=:6060` and open
 the following url in your browser.
 
-http://localhost:6060/pkg/github.com/coinbase/kryptology/
+http://localhost:6060/pkg/github.com/berry-block/kryptology/
 
 ## Developer Setup
+
 **Prerequisites**: `golang 1.17`, `make`
 
 ```$xslt
-git clone git@github.com/coinbase/kryptology.git && make 
-``` 
+git clone git@github.com/coinbase/kryptology.git && make
+```
 
 ## Components
 
@@ -74,15 +80,15 @@ This abstraction is currently only used in DKLs18 implementation.
 - [Verifiable encryption](pkg/verenc)
 - [ZKP Schnorr](pkg/zkp/schnorr)
 
-
 ## Contributing
+
 - [Versioning](https://blog.golang.org/publishing-go-modules): `vMajor.Minor.Patch`
-    - Major revision indicates breaking API change or significant new features
-    - Minor revision indicates no API breaking changes and may include significant new features or documentation
-    - Patch indicates no API breaking changes and may include only fixes
- 
- 
+  - Major revision indicates breaking API change or significant new features
+  - Minor revision indicates no API breaking changes and may include significant new features or documentation
+  - Patch indicates no API breaking changes and may include only fixes
+
 ## [References](docs/)
+
 - [[GG20] _One Round Threshold ECDSA with Identifiable Abort._](https://eprint.iacr.org/2020/540.pdf)
 - [[specV5] _One Round Threshold ECDSA for Coinbase._](docs/Coinbase_Pseudocode_v5.pdf)
 - [[EL20] _Eliding RSA Group Membership Checks._](docs/rsa-membership.pdf) [src](https://www.overleaf.com/project/5f9c3b0624a9a600012037a3)

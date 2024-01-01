@@ -16,12 +16,12 @@ import (
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/stretchr/testify/require"
 
-	tt "github.com/coinbase/kryptology/internal"
-	"github.com/coinbase/kryptology/pkg/core"
-	"github.com/coinbase/kryptology/pkg/core/curves"
-	"github.com/coinbase/kryptology/pkg/paillier"
-	"github.com/coinbase/kryptology/pkg/tecdsa/gg20/dealer"
-	"github.com/coinbase/kryptology/pkg/tecdsa/gg20/proof"
+	tt "github.com/berry-block/kryptology/internal"
+	"github.com/berry-block/kryptology/pkg/core"
+	"github.com/berry-block/kryptology/pkg/core/curves"
+	"github.com/berry-block/kryptology/pkg/paillier"
+	"github.com/berry-block/kryptology/pkg/tecdsa/gg20/dealer"
+	"github.com/berry-block/kryptology/pkg/tecdsa/gg20/proof"
 )
 
 var (
