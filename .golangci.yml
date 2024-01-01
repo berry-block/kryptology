@@ -115,63 +115,63 @@ linters:
 
 linters-settings:
   errcheck:
-#     # report about not checking of errors in type assertions: `a := b.(MyStruct)`;
-#     # default is false: such cases aren't reported by default.
+    #     # report about not checking of errors in type assertions: `a := b.(MyStruct)`;
+    #     # default is false: such cases aren't reported by default.
     check-type-assertions: true
-#     # report about assignment of errors to blank identifier: `num, _ := strconv.Atoi(numStr)`;
-#     # default is false: such cases aren't reported by default.
+    #     # report about assignment of errors to blank identifier: `num, _ := strconv.Atoi(numStr)`;
+    #     # default is false: such cases aren't reported by default.
     check-blank: false
-#   goconst:
-#     # minimal length of string constant, 3 by default
-#     min-len: 3
-#     # minimal occurrences count to trigger, 3 by default
-#     min-occurrences: 3
-#   gosimple:
-#     go: "1.17"
-#     checks: ["all"]
-#   predeclared:
-#     # include method names and field names (i.e., qualified names) in checks
-#     q: true
-#   staticcheck:
-#     go: "1.17"
-#     # https://staticcheck.io/docs/options#checks
-#     checks: ["all"]
-#   unused:
-#     go: "1.17"
-#   testpackage:
-#     # regexp pattern to skip files
-#     # We're skipping securechannel tests - and keep them as internal tests
-#     # because other wise we'd have to export a lot of unnecessary things out of
-#     # the package.
-#     skip-regexp: (groupchannel|peerchannel)_test\.go
-#   misspell:
-#     # Correct spellings using locale preferences for US or UK.
-#     # Default is to use a neutral variety of English.
-#     # Setting locale to US will correct the British spelling of 'colour' to 'color'.
-#     locale: US
-#     ignore-words:
-#       - cancelled
-#   godot:
-#     # comments to be checked: `declarations`, `toplevel`, or `all`
-#     scope: toplevel
-#     # list of regexps for excluding particular comment lines from check
-#     exclude:
-#     - '^ [=-_]+$'   # contain line comments eg '// ============'
-#     - '^ [A-Za-z-_]+$' # contains only a single word eg '// Cosigners'
-#     - '^ [A-Za-z-_]+ [A-Za-z-_]+$' # contains only two words eg '// Server Sage'
-#     - '[TODO|FIXME]:' # contains TODO or FIXME keywords
-#     - '[:]+' # contain a column eg. comments like '// Usage: ...' or comments containing an emoji
-#     # don't enforce comments starting with capital letters because the first word might be
-#     # referring to an argument within the function or alike
-#     capital: false
-#   whitespace:
-#     multi-if: true # Enforces newlines (or comments) after every multi-line if statement
-#     multi-func: false # Enforces newlines (or comments) after every multi-line function signature
-#   prealloc:
-#     # Report preallocation suggestions only on simple loops that have no returns/breaks/continues/gotos in them. true by default
-#     simple: true
-#     range-loops: true # Report preallocation suggestions on range loops, true by default
-#     for-loops: true # Report preallocation suggestions on for loops, false by default
+  #   goconst:
+  #     # minimal length of string constant, 3 by default
+  #     min-len: 3
+  #     # minimal occurrences count to trigger, 3 by default
+  #     min-occurrences: 3
+  #   gosimple:
+  #     go: "1.17"
+  #     checks: ["all"]
+  #   predeclared:
+  #     # include method names and field names (i.e., qualified names) in checks
+  #     q: true
+  #   staticcheck:
+  #     go: "1.17"
+  #     # https://staticcheck.io/docs/options#checks
+  #     checks: ["all"]
+  #   unused:
+  #     go: "1.17"
+  #   testpackage:
+  #     # regexp pattern to skip files
+  #     # We're skipping securechannel tests - and keep them as internal tests
+  #     # because other wise we'd have to export a lot of unnecessary things out of
+  #     # the package.
+  #     skip-regexp: (groupchannel|peerchannel)_test\.go
+  #   misspell:
+  #     # Correct spellings using locale preferences for US or UK.
+  #     # Default is to use a neutral variety of English.
+  #     # Setting locale to US will correct the British spelling of 'colour' to 'color'.
+  #     locale: US
+  #     ignore-words:
+  #       - cancelled
+  #   godot:
+  #     # comments to be checked: `declarations`, `toplevel`, or `all`
+  #     scope: toplevel
+  #     # list of regexps for excluding particular comment lines from check
+  #     exclude:
+  #     - '^ [=-_]+$'   # contain line comments eg '// ============'
+  #     - '^ [A-Za-z-_]+$' # contains only a single word eg '// Cosigners'
+  #     - '^ [A-Za-z-_]+ [A-Za-z-_]+$' # contains only two words eg '// Server Sage'
+  #     - '[TODO|FIXME]:' # contains TODO or FIXME keywords
+  #     - '[:]+' # contain a column eg. comments like '// Usage: ...' or comments containing an emoji
+  #     # don't enforce comments starting with capital letters because the first word might be
+  #     # referring to an argument within the function or alike
+  #     capital: false
+  #   whitespace:
+  #     multi-if: true # Enforces newlines (or comments) after every multi-line if statement
+  #     multi-func: false # Enforces newlines (or comments) after every multi-line function signature
+  #   prealloc:
+  #     # Report preallocation suggestions only on simple loops that have no returns/breaks/continues/gotos in them. true by default
+  #     simple: true
+  #     range-loops: true # Report preallocation suggestions on range loops, true by default
+  #     for-loops: true # Report preallocation suggestions on for loops, false by default
   errorlint:
     # Check whether fmt.Errorf uses the %w verb for formatting errors. keep in mind that any errors wrapped by fmt.Errorf implicitly become part of the API as according to Hyrum's Law.
     errorf: true
@@ -189,19 +189,19 @@ linters-settings:
     # only support one prefix
     # if not set, use goimports.local-prefixes
     local-prefixes: github.com
-#   gofumpt:
-#     # Choose whether or not to use the extra rules that are disabled
-#     # by default
-#     # list of rules: https://github.com/mvdan/gofumpt
-#     extra-rules: true
-#   forbidigo:
-#     # Forbid the following identifiers (identifiers are written using regexp):
-#     forbid:
-#       - 'fmt\.Print.*'
-#       - 'pubkey'
-#       - 'privkey'
-#     # Exclude godoc examples from forbidigo checks.  Default is true.
-#     exclude_godoc_examples: true
+  #   gofumpt:
+  #     # Choose whether or not to use the extra rules that are disabled
+  #     # by default
+  #     # list of rules: https://github.com/mvdan/gofumpt
+  #     extra-rules: true
+  #   forbidigo:
+  #     # Forbid the following identifiers (identifiers are written using regexp):
+  #     forbid:
+  #       - 'fmt\.Print.*'
+  #       - 'pubkey'
+  #       - 'privkey'
+  #     # Exclude godoc examples from forbidigo checks.  Default is true.
+  #     exclude_godoc_examples: true
   dogsled:
     # checks assignments with too many blank identifiers; default is 2
     max-blank-identifiers: 3
@@ -537,7 +537,7 @@ linters-settings:
 #   wrapcheck:
 #     ignorePackageGlobs:
 #       - google.golang.org/grpc/status
-#       - github.com/coinbase/tex/internal/coordinator/common
+#       - github.com/berry-block/tex/internal/coordinator/common
 
 issues:
   # Excluding configuration per-path, per-linter, per-text and per-source
@@ -545,21 +545,21 @@ issues:
     # Exclude some linters from running on tests files.
     - path: _test\.go
       linters:
-    #     # We're disabling `goconst` in tests, because there are a lot of
-    #     # repeated non-constant strings in the tests that we don't want to
-    #     # change eg. `cosigner id` as the cosigner id etc.
-    #     - goconst
-    #     # We're only enabling `godot` for library and internal code to make documentation
-    #     # generation and/or text-editor's job prettier.
-    #     - godot
-    #     # It's unnecessary to have a hard wrapping requirement for tests.
-    #     - wrapcheck
-    #     # It's unnecessary to enforce errors are not defined dynamically
-    #     - goerr113
-    #     # Ignore revive results for tests because there a lot of conflicting
-    #     # suggestions eg. `var-naming` says we shouldn't use underscores in
-    #     # function names but that's a common pattern that we use.
-    #     - revive
+        #     # We're disabling `goconst` in tests, because there are a lot of
+        #     # repeated non-constant strings in the tests that we don't want to
+        #     # change eg. `cosigner id` as the cosigner id etc.
+        #     - goconst
+        #     # We're only enabling `godot` for library and internal code to make documentation
+        #     # generation and/or text-editor's job prettier.
+        #     - godot
+        #     # It's unnecessary to have a hard wrapping requirement for tests.
+        #     - wrapcheck
+        #     # It's unnecessary to enforce errors are not defined dynamically
+        #     - goerr113
+        #     # Ignore revive results for tests because there a lot of conflicting
+        #     # suggestions eg. `var-naming` says we shouldn't use underscores in
+        #     # function names but that's a common pattern that we use.
+        #     - revive
         # In tests we disable the check that prevents assigning errors to _
         - errcheck
         # unnecessary
