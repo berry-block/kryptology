@@ -10,10 +10,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/coinbase/kryptology/pkg/core/curves"
-	dkg "github.com/coinbase/kryptology/pkg/dkg/gennaro"
-	sharing "github.com/coinbase/kryptology/pkg/sharing/v1"
-	bls "github.com/coinbase/kryptology/pkg/signatures/bls/bls_sig"
+	"github.com/berry-block/kryptology/pkg/core/curves"
+	dkg "github.com/berry-block/kryptology/pkg/dkg/gennaro"
+	sharing "github.com/berry-block/kryptology/pkg/sharing/v1"
+	bls "github.com/berry-block/kryptology/pkg/signatures/bls/bls_sig"
 )
 
 const LIMIT = 4

@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// NOTE that the bls curves are NOT constant time. There is an open issue to address it: https://github.com/coinbase/kryptology/issues/233
+// NOTE that the bls curves are NOT constant time. There is an open issue to address it: https://github.com/berry-block/kryptology/issues/233
 
 package curves
 
@@ -19,7 +19,7 @@ import (
 	bls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/coinbase/kryptology/pkg/core"
+	"github.com/berry-block/kryptology/pkg/core"
 )
 
 // See 'r' = https://eprint.iacr.org/2018/962.pdf Figure 16
@@ -349,7 +349,7 @@ func (p *PointBls12377G1) Random(reader io.Reader) Point {
 
 func (p *PointBls12377G1) Hash(bytes []byte) Point {
 	var domain = []byte("BLS12377G1_XMD:SHA-256_SVDW_RO_")
-	pt, err := bls12377.HashToCurveG1Svdw(bytes, domain)
+	pt, err := bls12377.HashToG1(bytes, domain)
 	if err != nil {
 		return nil
 	}
@@ -623,7 +623,7 @@ func (p *PointBls12377G2) Random(reader io.Reader) Point {
 
 func (p *PointBls12377G2) Hash(bytes []byte) Point {
 	var domain = []byte("BLS12377G2_XMD:SHA-256_SVDW_RO_")
-	pt, err := bls12377.HashToCurveG2Svdw(bytes, domain)
+	pt, err := bls12377.HashToG2(bytes, domain)
 	if err != nil {
 		return nil
 	}
